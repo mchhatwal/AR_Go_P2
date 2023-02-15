@@ -55,7 +55,7 @@
 		}
 
 		public double mvmt_speed = 0.000001; 
-		Vector2d current_player_latlong = new Vector2d(42.274900, -83.733800); 
+		static Vector2d current_player_latlong = new Vector2d(42.274900, -83.733800); 
 		private void Update() 
 		{ 
 
