@@ -28,13 +28,13 @@ public class SwitchModeButton : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "exploration_scene") 
         {
             SceneManager.LoadScene("interaction_scene"); 
-            // gameplay_canvas_instance.GetComponentInChildren<Text>().text = "Explore Mode"; 
+            gameplay_canvas_instance.GetComponentInChildren<Text>().text = "Explore Mode"; 
         } 
 
         else if (SceneManager.GetActiveScene().name == "interaction_scene") 
         {
             SceneManager.LoadScene("exploration_scene"); 
-            // gameplay_canvas_instance.GetComponentInChildren<Text>().text = "Interact Mode";  
+            gameplay_canvas_instance.GetComponentInChildren<Text>().text = "Interact Mode";  
         } 
 
         // maybe play audio here once scene is switched to and loaded? 
