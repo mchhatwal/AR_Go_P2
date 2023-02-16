@@ -25,19 +25,39 @@ public class SwitchModeButton : MonoBehaviour
 
     public void OnSwitchButtonPressed()
     { 
-        
+        // based on current scene, switch to alternate scene
+        // change button text when swapping scenes 
+        // change audio clip to be played when swapping scenes
         if (SceneManager.GetActiveScene().name == "exploration_scene") 
         {
+            // change scene 
             SceneManager.LoadScene("interaction_scene"); 
-            gameplay_canvas_instance.GetComponentInChildren<Text>().text = "Explore Mode"; 
+            // change button 
+            gameplay_canvas_instance.GetComponentInChildren<Text>().text = "Explore Mode";
+
+            // grab current audio and stop playing 
+            AudioSource source = gameplay_canvas_instance.GetComponent<AudioSource>();
+            source.Stop(); 
+
+            AudioClip clip = Resources.Load<AudioClip>("interact");
+
+            // after switching scenes, play new audio
+            source.PlayOneShot(clip); 
         } 
 
         else if (SceneManager.GetActiveScene().name == "interaction_scene") 
         {
             SceneManager.LoadScene("exploration_scene"); 
             gameplay_canvas_instance.GetComponentInChildren<Text>().text = "Interact Mode";  
-        } 
 
-        // maybe play audio here once scene is switched to and loaded? 
+            // grab current audio and stop playing 
+            AudioSource source = gameplay_canvas_instance.GetComponent<AudioSource>();
+            source.Stop(); 
+
+            AudioClip clip = Resources.Load<AudioClip>("explore");
+
+            // after switching scenes, play new audio
+            source.PlayOneShot(clip); 
+        } 
     }
 }
