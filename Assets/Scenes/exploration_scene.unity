@@ -2008,6 +2008,7 @@ GameObject:
   - component: {fileID: 1102285003}
   - component: {fileID: 1102285002}
   - component: {fileID: 1102285004}
+  - component: {fileID: 1102285005}
   m_Layer: 0
   m_Name: SeedList
   m_TagString: Untagged
@@ -2079,6 +2080,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1102285005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102285001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4aa9a6067632e44b7ece8afd7a4d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TreesToSpawn: []
 --- !u!1 &1188978833
 GameObject:
   m_ObjectHideFlags: 0
