@@ -8,13 +8,14 @@ public class SwitchModeButton : MonoBehaviour
 {
     public GameObject gameplay_canvas; 
 
-    static GameObject gameplay_canvas_instance; 
-    
+    static GameObject gameplay_canvas_instance;
+    public GameObject tree_object;
+
     public void Start() 
     { 
         if (gameplay_canvas_instance == null) 
         { 
-            gameplay_canvas_instance = gameplay_canvas; 
+            gameplay_canvas_instance = gameplay_canvas;
             DontDestroyOnLoad(gameplay_canvas); 
         }
         else 
@@ -59,23 +60,9 @@ public class SwitchModeButton : MonoBehaviour
             // after switching scenes, play new audio
             source.PlayOneShot(clip);
 
-            int index = myseeds.tree.Count;
-            int pos_index = myseeds.pos.Count;
-            while(pos_index < index)
-            {
-                pos_index++;
-                GameObject player = GameObject.Find("PlayerTarget");
-                Vector3 randomvec = new Vector3(Random.Range(0, 1), Random.Range(0, 1), 0);
-                myseeds.pos.Add(Vector3.zero + randomvec);
-            }
+            GameObject.FindGameObjectWithTag("Tree").GetComponent<MeshRenderer>().enabled = true;
+            // tree_object.SetActive(true);
 
-            for(int i = 0; i < myseeds.tree.Count; i++)
-            {
-                GameObject obj = Instantiate(myseeds.tree[i]);
-                obj.transform.position = myseeds.pos[i];
-                obj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-
-            }
         } 
     }
 }
