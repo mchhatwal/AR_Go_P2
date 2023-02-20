@@ -57,7 +57,25 @@ public class SwitchModeButton : MonoBehaviour
             AudioClip clip = Resources.Load<AudioClip>("explore");
 
             // after switching scenes, play new audio
-            source.PlayOneShot(clip); 
+            source.PlayOneShot(clip);
+
+            int index = myseeds.tree.Count;
+            int pos_index = myseeds.pos.Count;
+            while(pos_index < index)
+            {
+                pos_index++;
+                GameObject player = GameObject.Find("PlayerTarget");
+                Vector3 randomvec = new Vector3(Random.Range(0, 1), Random.Range(0, 1), 0);
+                myseeds.pos.Add(Vector3.zero + randomvec);
+            }
+
+            for(int i = 0; i < myseeds.tree.Count; i++)
+            {
+                GameObject obj = Instantiate(myseeds.tree[i]);
+                obj.transform.position = myseeds.pos[i];
+                obj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+            }
         } 
     }
 }
