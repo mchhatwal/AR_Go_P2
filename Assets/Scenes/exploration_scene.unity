@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 8030622}
   - component: {fileID: 8030621}
   - component: {fileID: 8030625}
+  - component: {fileID: 8030626}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -232,6 +233,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player_avatar: {fileID: 843921208}
   offset: {x: 0, y: 43.59, z: -27.52}
+--- !u!114 &8030626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09440ad4133fd48278310357cc9de9ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acorn_prefab: {fileID: 5098183070712999843, guid: 15c9eafc7a1cc425fa5bbc60fb3edd36,
+    type: 3}
+  acorn_launch_velo: 50
 --- !u!1001 &102728229
 PrefabInstance:
   m_ObjectHideFlags: 0

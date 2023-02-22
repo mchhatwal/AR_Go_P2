@@ -1,0 +1,13 @@
+# Blender 3.3.1 MTL File: 'acorn_2.blend'
+# www.blender.org
+
+newmtl Acorn_2
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Acorn_2_diffuse.png
+map_Ns Acorn_2_rougness.png
+map_Bump -bm 1.000000 Acorn_2_normal.png
