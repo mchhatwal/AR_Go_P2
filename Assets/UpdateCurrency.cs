@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class UpdateCurrency : MonoBehaviour
 {
     public static int currency; 
+    private GameObject[] objects; 
     // Start is called before the first frame update
     // void Start()
     // {
@@ -18,6 +19,13 @@ public class UpdateCurrency : MonoBehaviour
     void Update()
     {
         // update currency based on current value 
+        objects = GameObject.FindGameObjectsWithTag("Dollar");
+        if (objects.Length == 1) 
+        { 
+            // extra bonus for finding Ann Arbor Crest Image 
+            currency += 100; 
+        }
+
         GetComponent<TMP_Text>().text = "$" + currency.ToString(); 
     }
 }

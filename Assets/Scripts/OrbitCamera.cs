@@ -66,8 +66,8 @@ public class OrbitCamera : MonoBehaviour
             
             previousPosition = newPosition;
         }
-        // else { 
-        //     transform.position = player_avatar.position + offset;  
-        // }
+        else { 
+            transform.position = player_avatar.position + offset;  
+        }
     }
 }
