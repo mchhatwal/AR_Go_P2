@@ -10,7 +10,7 @@ public class IsLandmark : MonoBehaviour
     [SerializeField] AbstractMap map;
     [SerializeField] Vector2d world_position;
     public string name;
-    public Image image;
+    public Sprite image;
     public string description;
     // Start is called before the first frame update
     void Start() 

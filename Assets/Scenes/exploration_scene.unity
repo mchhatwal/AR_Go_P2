@@ -404,7 +404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 332.40405}
+  m_AnchoredPosition: {x: 0, y: 382.24536}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95047490
@@ -1001,8 +1001,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.477722, y: -42.404053}
-  m_SizeDelta: {x: -272.9554, y: -1338.8}
+  m_AnchoredPosition: {x: -10.477722, y: 104.75464}
+  m_SizeDelta: {x: -272.9554, y: -1044.4825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &173985784
 GameObject:
@@ -1218,9 +1218,14 @@ MonoBehaviour:
   world_position:
     x: 42.29307010277588
     y: -83.71637909387142
-  name: 
-  image: {fileID: 0}
-  description: 
+  name: Bob and Betty Beyster Building
+  image: {fileID: 21300000, guid: eedf11c5359b5524ba3f503a46efd07b, type: 3}
+  description: The Bob and Betty Beyster Building, completed in 2005 and built with
+    alumni funds, is the home of CSE and a destination for events and gatherings
+    on the U-M North Campus. Designed to bring in and reflect natural light and featuring
+    a spacious four-story atrium along with 100,000 square feet of lab, office, and
+    meeting space, the Beyster Building encourages and precipitates interaction,
+    creativity, and collaboration.
 --- !u!4 &179708753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471166, guid: f4f6b630159e6b34386dec2579f250b2,
@@ -1313,9 +1318,12 @@ MonoBehaviour:
   world_position:
     x: 42.266195033890625
     y: -83.74868379625192
-  name: 
-  image: {fileID: 0}
-  description: 
+  name: Michigan Stadium
+  image: {fileID: 21300000, guid: 9135aff5c4a44714c865c580001c97c2, type: 3}
+  description: Michigan Stadium, nicknamed "The Big House," is the football stadium
+    for the University of Michigan in Ann Arbor, Michigan. It is the largest stadium
+    in the United States and the Western Hemisphere, the third largest stadium in
+    the world, and the 34th largest sports venue in the world.
 --- !u!1 &201572163 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 165880, guid: f4f6b630159e6b34386dec2579f250b2,
@@ -1338,9 +1346,12 @@ MonoBehaviour:
   world_position:
     x: 42.28403831096963
     y: -83.73129610350935
-  name: 
-  image: {fileID: 0}
-  description: 
+  name: UM Hospital
+  image: {fileID: 21300000, guid: adef020b7221bbb40b9fb1e82932f6c0, type: 3}
+  description: University of Michigan Health-Ann Arbor in Ann Arbor, MI is ranked
+    No. 17 on the Best Hospitals Honor Roll. It is nationally ranked in 13 adult
+    and 9 pediatric specialties and rated high performing in 1 adult specialty and
+    20 procedures and conditions. It is a general medical and surgical facility.
 --- !u!4 &201572165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471166, guid: f4f6b630159e6b34386dec2579f250b2,
@@ -1760,9 +1771,12 @@ MonoBehaviour:
   world_position:
     x: 42.28041895085508
     y: -83.73359585650026
-  name: 
-  image: {fileID: 0}
-  description: 
+  name: UM Natural Museum
+  image: {fileID: 21300000, guid: 0d7d393c4ba0a12479e423f49ff2f83e, type: 3}
+  description: The U-M Museum of Natural History puts science on display. Exhibits
+    and educational programs feature U-M's world-class natural science collections,
+    cutting-edge research by U-M faculty, and interdisciplinary topics of global
+    and local concern.
 --- !u!1 &476285323
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,9 +2637,11 @@ MonoBehaviour:
   world_position:
     x: 42.281805650977795
     y: -83.74537445037814
-  name: 
-  image: {fileID: 0}
-  description: 
+  name: Ann Arbor City Council
+  image: {fileID: 21300000, guid: d12a59cfbf4656d41bb2079ddc1ee240, type: 3}
+  description: The City Council consists of the mayor and 10 Council members, two
+    from each of Ann Arbor's five wards. One half of City Council is elected every
+    two years, concurrent with the State General Election, in partisan elections.
 --- !u!1 &1078358199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,9 +2677,9 @@ RectTransform:
   m_Father: {fileID: 1616574021}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223, y: 420}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 870.5, y: 1804.5}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078358201
@@ -3637,7 +3653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.2534, y: 88.2011}
+  m_AnchoredPosition: {x: -7.2534, y: 144.7453}
   m_SizeDelta: {x: 365.1403, y: 362.7298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550028400
@@ -4057,6 +4073,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LandmarkDetailPanel: {fileID: 167018720}
+  title_text: {fileID: 95047490}
+  description_text: {fileID: 2095357349}
+  image: {fileID: 1550028400}
 --- !u!1001 &1737093125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4143,9 +4162,11 @@ MonoBehaviour:
   world_position:
     x: 42.2770750204957
     y: -83.7381844124698
-  name: 
-  image: {fileID: 0}
-  description: 
+  name: The Diag
+  image: {fileID: 21300000, guid: 916d3054d0af648498a166e2dbecd252, type: 3}
+  description: The Diag is a large open space in the middle of the University of
+    Michigan's Central Campus. Originally known as the Diagonal Green, the Diag derives
+    its name from the many sidewalks running near or through it in diagonal directions.
 --- !u!1 &1780384817
 GameObject:
   m_ObjectHideFlags: 0
@@ -4853,9 +4874,9 @@ RectTransform:
   m_Father: {fileID: 1616574021}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214, y: 421}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 167.5, y: -109}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1880886044
@@ -5052,8 +5073,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

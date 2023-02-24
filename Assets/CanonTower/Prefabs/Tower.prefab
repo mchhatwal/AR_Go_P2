@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471166}
   - component: {fileID: 139109806693054151}
+  - component: {fileID: 7729843106321857086}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -267,6 +268,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9670172fd48994b8fe69118f0ab9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 0}
+  world_position:
+    x: 0
+    y: 0
+  name: 
+  image: {fileID: 0}
+  description: 
+--- !u!65 &7729843106321857086
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165880}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9655151, y: 10.022199, z: 4.392273}
+  m_Center: {x: 0.015411377, y: 4.5110993, z: -0.1743927}
 --- !u!1 &171538
 GameObject:
   m_ObjectHideFlags: 0
