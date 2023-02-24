@@ -8,7 +8,7 @@ public class SwitchModeButton : MonoBehaviour
 {
     public GameObject gameplay_canvas; 
 
-    static GameObject gameplay_canvas_instance;
+    public static GameObject gameplay_canvas_instance;
     public GameObject tree_object;
 
     public void Start() 
@@ -60,8 +60,6 @@ public class SwitchModeButton : MonoBehaviour
             // after switching scenes, play new audio
             source.PlayOneShot(clip);
 
-            GameObject.FindGameObjectWithTag("Tree").GetComponent<MeshRenderer>().enabled = true;
-            // tree_object.SetActive(true);
 
         } 
     }

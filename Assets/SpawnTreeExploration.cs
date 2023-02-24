@@ -8,22 +8,19 @@ public class SpawnTreeExploration : MonoBehaviour
 
     void Start()
     {
+        Seeds myseeds = Seeds.instance;
         int index = myseeds.tree.Count;
-        int pos_index = myseeds.pos.Count;
-        while (pos_index < index)
+        Debug.Log("TreeList count: " + index);
+        for(int i = 0; i < index; i++)
         {
-            pos_index++;
             GameObject player = gameObject;
-            Vector3 randomvec = new Vector3(Random.Range(0, 1),  0, Random.Range(0, 1));
-            myseeds.pos.Add(player.transform.position + randomvec);
-        }
-
-        for (int i = 0; i < myseeds.tree.Count; i++)
-        {
-            GameObject obj = Instantiate(myseeds.tree[i]);
-            Debug.Log(obj);
-            obj.transform.position = myseeds.pos[i];
-            obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            Vector3 randomvec = new Vector3(Random.Range(2f, 8f),  0, -Random.Range(2f, 8f));
+            GameObject new_tree = Instantiate(myseeds.tree[i]);
+            if (new_tree.name.Contains("Mushroom"))
+                new_tree.transform.localScale = Vector3.one * 10f;
+            else new_tree.transform.localScale = Vector3.one;
+            new_tree.transform.position = randomvec + player.transform.position;
+            Debug.Log(new_tree.transform.position);
         }
     }
 

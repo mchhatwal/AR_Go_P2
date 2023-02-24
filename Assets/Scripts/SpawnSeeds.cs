@@ -10,8 +10,7 @@ public class SpawnSeeds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myseeds.tree = new List<GameObject>();
-        myseeds.pos = new List<Vector2>();
+
     }
 
     // Update is called once per frame
@@ -40,12 +39,10 @@ public class SpawnSeeds : MonoBehaviour
 
 
         //spawn in exploration ?
-        myseeds.tree.Add(TreesToSpawn[index]);
+        Seeds.instance.tree.Add(TreesToSpawn[index]);
+        Debug.Log("Tree Spawn " + Seeds.instance.tree.Count);
 
     }
 }
 
-public static class myseeds{
-    public static List<GameObject> tree;
-    public static List<Vector2> pos;
-}
+
