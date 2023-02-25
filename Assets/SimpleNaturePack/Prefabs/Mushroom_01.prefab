@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4385080170331349429}
   - component: {fileID: 4385080170330252149}
   - component: {fileID: 4729065021270817612}
+  - component: {fileID: -8892354543606846129}
   m_Layer: 0
   m_Name: Mushroom_01
   m_TagString: Tree
@@ -98,3 +99,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d062f5c56ffb55c4f832432ada269abe, type: 3}
+--- !u!114 &-8892354543606846129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385080170328260021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 634acac4c2801d34cabaad9028a8fb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin_scale: 2
+  grown_scale: 6
+  reward: 11
+  id: 0

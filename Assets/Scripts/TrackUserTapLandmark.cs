@@ -36,6 +36,7 @@ public class TrackUserTapLandmark : MonoBehaviour
                 if (landmark != null)
                 {
                     LandmarkDetailPanel.SetActive(true);
+                    UserInventory.instance.IsTreeUnLocked[landmark.UnlockIndex] = true;
                     image.sprite = landmark.image;
                     title_text.text = landmark.name;
                     description_text.text = landmark.description;

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class UpdateCurrency : MonoBehaviour
 {
-    public static int currency; 
+    public static int currency = 100; 
     private GameObject[] objects; 
     // Start is called before the first frame update
     // void Start()

@@ -12,6 +12,7 @@ public class IsLandmark : MonoBehaviour
     public string name;
     public Sprite image;
     public string description;
+    public int UnlockIndex;
     // Start is called before the first frame update
     void Start() 
     {
