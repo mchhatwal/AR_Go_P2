@@ -7,6 +7,7 @@ public class SpawnTreeExploration : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] AbstractMap map;
+    [SerializeField] GameObject squirrel_prefab;
     void Start()
     {
         Seeds myseeds = Seeds.instance;
@@ -25,7 +26,18 @@ public class SpawnTreeExploration : MonoBehaviour
             GameObject tree_obj = Instantiate(new_tree.TreeType);
             new_tree.Obj = tree_obj;
             tree_obj.transform.localScale = Vector3.one * new_tree.exploration_scale;
+            Debug.Log(tree_obj.transform.localScale);
             tree_obj.transform.position = randomvec + map.GeoToWorldPosition(new_tree.WorldLocation);
+
+            float rand =  Random.Range(0f, 1f);
+            if (rand <= 0.5f)
+            {
+                new_tree.SquirrelAround = true;
+                GameObject squ = Instantiate(squirrel_prefab);
+                squ.GetComponent<IsSquirrel>().IsInteractiveMode = false;
+                //Debug.Log(tree_obj.transform.position);
+                squ.transform.position = tree_obj.transform.position + new Vector3(Random.Range(1f, 2f), 0, -Random.Range(1f, 2f));
+            }
         }
     }
 

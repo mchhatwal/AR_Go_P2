@@ -13,17 +13,19 @@ public class Tree : MonoBehaviour
 
     void Start()
     {
-        transform.localScale = Vector3.one * origin_scale;
         IsInteractionMode = SceneManager.GetActiveScene().name != "exploration_scene";
+        if(IsInteractionMode)
+            transform.localScale = Vector3.one * origin_scale;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(IsInteractionMode && Time.frameCount - last_frame_count >= 240 && transform.localScale.x < grown_scale)
+        if(IsInteractionMode && Time.frameCount - last_frame_count >= 200 && transform.localScale.x < grown_scale)
         {
             last_frame_count = Time.frameCount;
-            transform.localScale += Vector3.one * (grown_scale - origin_scale) / 10;
+            transform.localScale += Vector3.one * (grown_scale - origin_scale) / 15;
 
             if (transform.localScale.x >= grown_scale) UpdateCurrency.currency += reward;
         }

@@ -3,7 +3,10 @@ guid: 54504b8481334a844b1b88053240d918
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - map: {instanceID: 0}
+  - squirrel_prefab: {fileID: 919132149155446097, guid: b6a51ad16d01a403a82ba5229ec5de78,
+      type: 3}
   executionOrder: 2000
   icon: {instanceID: 0}
   userData: 

@@ -31,7 +31,7 @@ public class TreeInstance
     public float scale, grown_scale, exploration_scale;
     public Vector2d WorldLocation;
     public int id;
-
+    public bool SquirrelAround = false;
     public TreeInstance(int id, float origin_scale = .3f, float grown_scale = 1f)
     {
         this.scale = origin_scale;

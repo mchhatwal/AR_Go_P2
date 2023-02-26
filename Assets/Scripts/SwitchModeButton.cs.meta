@@ -3,7 +3,12 @@ guid: 7d6f995ea379c47c6acf41880952f867
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gameplay_canvas: {instanceID: 0}
+  - map: {instanceID: 0}
+  - tree_object: {instanceID: 0}
+  - squirrel_prefab: {fileID: 919132149155446097, guid: b6a51ad16d01a403a82ba5229ec5de78,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

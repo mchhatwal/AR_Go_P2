@@ -15,7 +15,7 @@ public class UserInventory : MonoBehaviour
     public TextMeshProUGUI acorn_displayer;
     void Start()
     {
-        instance = this;
+        if(instance == null) instance = this;
         SeedShopPanel.SetActive(false);
     }
 

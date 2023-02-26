@@ -25,6 +25,7 @@ public class SpawnSeeds : MonoBehaviour
             tree_count_displayer[i].text = "" + UserInventory.instance.tree_count[i];
         }
 
+        // Debug.Log(UserInventory.instance.tree_count[0]);
         acorn_count_displayer.text = "" + UserInventory.instance.acorn_count;
     }
 

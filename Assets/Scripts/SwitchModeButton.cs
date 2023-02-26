@@ -13,6 +13,7 @@ public class SwitchModeButton : MonoBehaviour
     public static GameObject gameplay_canvas_instance;
     public GameObject tree_object;
 
+
     public void Start() 
     { 
         if (gameplay_canvas_instance == null) 
@@ -45,13 +46,14 @@ public class SwitchModeButton : MonoBehaviour
             {
                 Vector3 user_position = GameObject.Find("PlayerTarget").transform.position;
                 float distance = Vector3.Distance(user_position, tree.Obj.transform.position);
+                Debug.Log("id = " + tree.id);
                 if (distance < shortest_distance)
                 {
                     shortest_distance = distance;
                     show_tree = tree;
                 }
             }
-
+            ARSpawnTree.show_tree = show_tree;
             // change scene 
             SceneManager.LoadScene("interaction_scene"); 
             // change button 
@@ -66,15 +68,9 @@ public class SwitchModeButton : MonoBehaviour
             // after switching scenes, play new audio
             source.PlayOneShot(clip);
 
-            if(show_tree != null)
-            {
-                GameObject new_tree = Instantiate(show_tree.TreeType);
-                new_tree.transform.localScale = Vector3.one * show_tree.scale;
-            }
 
 
         } 
-
         else if (SceneManager.GetActiveScene().name == "interaction_scene") 
         {
             SceneManager.LoadScene("exploration_scene"); 
