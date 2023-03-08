@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,15 +209,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8030620}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 114.6, z: -67.3}
+  m_LocalRotation: {x: 0.64025694, y: -0, z: -0, w: 0.7681609}
+  m_LocalPosition: {x: -23.240072, y: -48.088966, z: 75.91282}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1432020543}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 932396067}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 79.622, y: 0, z: 0}
 --- !u!114 &8030625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,10 +230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe50dbf48f204a8184303afd1a23ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_avatar: {fileID: 843921208}
-  offset: {x: 0, y: 43.59, z: -27.52}
-  cam: {fileID: 8030623}
-  distanceToTarget: 10
+  target: {fileID: 843921208}
+  distance: 10
+  sensitivity: 5
+  offset: {x: 0, y: 44, z: -28}
 --- !u!1 &41177499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3571,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd961b1c9541a4cee99686069ecce852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &932396066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 932396067}
+  - component: {fileID: 932396068}
+  m_Layer: 0
+  m_Name: CameraPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &932396067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932396066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8030624}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &932396068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932396066}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe50dbf48f204a8184303afd1a23ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  distance: 10
+  sensitivity: 5
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &990798399
 GameObject:
   m_ObjectHideFlags: 0
@@ -5119,8 +5168,6 @@ MonoBehaviour:
   gameplay_canvas: {fileID: 1616574017}
   map: {fileID: 843921209}
   tree_object: {fileID: 0}
-  squirrel_prefab: {fileID: 5695024808047182329, guid: 24b5378ebcb1e46829ddaaed9a2e965d,
-    type: 3}
 --- !u!1 &1550028398
 GameObject:
   m_ObjectHideFlags: 0
