@@ -28,14 +28,14 @@ public class AcornSpawner : MonoBehaviour
 
     public void LaunchAcorn() 
     { 
-        // add logic for checking if acorns are in inventory to throw!!! 
-        // need more than 0 acorns to launch at least 1 
+        if (UserInventory.instance.acorn_count > 0)
+        {
+            Vector3 spawn_pos = Camera.main.gameObject.transform.position;
+            GameObject new_acorn = GameObject.Instantiate(acorn_prefab, spawn_pos, Quaternion.identity);
+            new_acorn.GetComponent<Rigidbody>().velocity = Camera.main.gameObject.transform.forward * acorn_launch_velo;
 
-        Vector3 spawn_pos = Camera.main.gameObject.transform.position; 
-        GameObject new_acorn = GameObject.Instantiate(acorn_prefab, spawn_pos, Quaternion.identity); 
-        new_acorn.GetComponent<Rigidbody>().velocity = Camera.main.gameObject.transform.forward * acorn_launch_velo; 
-        
-        // play sfx for throwing acorn 
-        AudioSource.PlayClipAtPoint(sfx, Camera.main.gameObject.transform.position); 
+            // play sfx for throwing acorn 
+            AudioSource.PlayClipAtPoint(sfx, Camera.main.gameObject.transform.position);
+        }
     }
 }

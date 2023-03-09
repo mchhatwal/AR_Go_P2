@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsInteractiveMode: 0
-  sfx: {fileID: 8300000, guid: 099f5e31d79a242c98d85aeb659d60e5, type: 3}
+  collideSfx: {fileID: 8300000, guid: 099f5e31d79a242c98d85aeb659d60e5, type: 3}
+  squirrelAttackSfx: {fileID: 8300000, guid: ec8ec3a3004444666b5356ecfdfb39e9, type: 3}
+  gameplay_canvas_instance: {fileID: 0}
 --- !u!54 &2487111522390070821
 Rigidbody:
   m_ObjectHideFlags: 0

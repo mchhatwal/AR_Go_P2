@@ -5,12 +5,15 @@ using UnityEngine;
 public class IsSquirrel : MonoBehaviour
 {
     public bool IsInteractiveMode = false;
-    public AudioClip sfx;
+    public AudioClip collideSfx;
+    public AudioClip squirrelAttackSfx;
+    private GameObject gameplay_canvas; 
+    // public GameObject gameplay_canvas;
     // // Start is called before the first frame update
-    // void Start()
-    // {
+    //void Start()
+    //{
 
-    // }
+    //}
 
     // // Update is called once per frame
     // void Update()
@@ -18,6 +21,17 @@ public class IsSquirrel : MonoBehaviour
     private void Start()
     {
         transform.localScale = Vector3.one * 800;
+        gameplay_canvas = GameObject.Find("GameplayCanvas"); 
+
+        // start squirrel audio when squirrel spawned + in interactive mode
+        if (IsInteractiveMode)
+        {
+            AudioSource source = gameplay_canvas.GetComponent<AudioSource>();
+            source.Stop();
+
+            // stop interact mode, play squirrel attack music 
+            source.PlayOneShot(squirrelAttackSfx);
+        }
     }
     // }
     private void OnCollisionEnter(Collision collision)
@@ -28,9 +42,18 @@ public class IsSquirrel : MonoBehaviour
         }
 
         // play sfx for squirrel touch acorn 
-        AudioSource.PlayClipAtPoint(sfx, Camera.main.gameObject.transform.position); 
-        Destroy(collision.gameObject); 
+        AudioSource.PlayClipAtPoint(collideSfx, Camera.main.gameObject.transform.position);
+        Destroy(collision.gameObject);
         Destroy(gameObject);
+
+        // stop squirrel attack audio
+        AudioSource source = gameplay_canvas.GetComponent<AudioSource>();
+        source.Stop();
+
+        AudioClip clip = Resources.Load<AudioClip>("interact");
+
+        // back to interact mode audio 
+        source.PlayOneShot(clip); 
     }
 
     private void Update()
