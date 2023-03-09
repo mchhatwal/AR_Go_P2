@@ -54,19 +54,24 @@
 			}
 		}
 
-		public double mvmt_speed = 0.000001; 
+		public double mvmt_speed = 0.000004; 
 		static Vector2d current_player_latlong = new Vector2d(42.274900, -83.733800); 
 		private void Update() 
 		{ 
+			float sprint = 1.0f; 
+
+			if (Input.GetKey(KeyCode.LeftShift)) { 
+				sprint = 3.0f; 
+			}
 
 			if (Input.GetKey(KeyCode.UpArrow))
-				current_player_latlong += new Vector2d(mvmt_speed, 0.0); 
+				current_player_latlong += new Vector2d(mvmt_speed, 0.0) * sprint; 
 			if (Input.GetKey(KeyCode.DownArrow))
-				current_player_latlong += new Vector2d(-mvmt_speed, 0.0); 
+				current_player_latlong += new Vector2d(-mvmt_speed, 0.0) * sprint; 
 			if (Input.GetKey(KeyCode.RightArrow))
-				current_player_latlong += new Vector2d(0.0, mvmt_speed); 
+				current_player_latlong += new Vector2d(0.0, mvmt_speed) * sprint; 
 			if (Input.GetKey(KeyCode.LeftArrow))
-				current_player_latlong += new Vector2d(0.0, -mvmt_speed); 
+				current_player_latlong += new Vector2d(0.0, -mvmt_speed) * sprint; 
 
 			_currentLocation.LatitudeLongitude = current_player_latlong; 
 		}
