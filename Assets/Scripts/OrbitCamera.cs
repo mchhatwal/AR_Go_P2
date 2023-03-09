@@ -11,37 +11,13 @@ public class OrbitCamera : MonoBehaviour
     private float x = 0.0f; // The current x rotation of the camera
     private float y = 0.0f; // The current y rotation of the camera
 
-    //void Start()
-    //{
-    //    transform.position = target.position + offset;
-    //    transform.rotation = Quaternion.LookRotation(target.position - transform.position, Vector3.up); 
-    //    // transform.LookAt(target.position);
-    //}
-
-    //void LateUpdate()
-    //{
-    //    if (Input.GetMouseButton(0))
-    //    {
-    //        // Get the mouse input and update the camera rotation
-    //        x += Input.GetAxis("Mouse X") * sensitivity;
-    //        y -= Input.GetAxis("Mouse Y") * sensitivity;
-    //    }
-
-    //    // Clamp the y rotation to prevent the camera from flipping upside down
-    //    y = Mathf.Clamp(y, -90.0f, 90.0f);
-
-    //    // Set the camera position and rotation
-    //    Quaternion rotation = Quaternion.Euler(y, x, 0);
-    //    Vector3 position = rotation * new Vector3(0.0f, 0.0f, -distance) + target.position;
-    //    transform.rotation = rotation;
-    //    transform.position = position;
-    //}
     void Start()
     {
         // Set the camera position and rotation to look at the player avatar
         Vector3 avatarPos = playerAvatar.position + offset;
         Vector3 groundPos = avatarPos - Vector3.up * 1.0f;
-        transform.position = groundPos + Vector3.up * distance;
+        //transform.position = groundPos + Vector3.up * distance;
+        transform.position = groundPos + new Vector3(offset.x, 2.0f, offset.z);
         transform.rotation = Quaternion.LookRotation(groundPos - transform.position, Vector3.up);
     }
 

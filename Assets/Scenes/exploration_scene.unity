@@ -231,9 +231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAvatar: {fileID: 843921208}
-  distance: 25
+  distance: 50
   sensitivity: 5
-  offset: {x: 500, y: 500, z: 500}
+  offset: {x: 200, y: 200, z: 200}
 --- !u!1 &41177499
 GameObject:
   m_ObjectHideFlags: 0
