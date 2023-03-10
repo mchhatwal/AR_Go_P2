@@ -7,7 +7,8 @@ public class IsSquirrel : MonoBehaviour
     public bool IsInteractiveMode = false;
     public AudioClip collideSfx;
     public AudioClip squirrelAttackSfx;
-    private GameObject gameplay_canvas; 
+    private GameObject gameplay_canvas;
+    float timer = 0f;
     // public GameObject gameplay_canvas;
     // // Start is called before the first frame update
     //void Start()
@@ -58,15 +59,17 @@ public class IsSquirrel : MonoBehaviour
 
     private void Update()
     {
+        timer += Time.deltaTime;
+        
         if (!IsInteractiveMode)
         {
-            GetComponent<BoxCollider>().isTrigger = true;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             return;
         }
         transform.localScale = Vector3.one * 300;
-        GetComponent<BoxCollider>().isTrigger = false;
-        if (Time.frameCount % 500 <= 250) gameObject.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 0);
+        if (timer >= 2.5f) gameObject.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 0);
         else gameObject.GetComponent<Rigidbody>().velocity = new Vector3(-1, 0, 0);
+
+        if (timer >= 5f) timer -= 5f;
     }
 }
