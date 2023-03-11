@@ -36,25 +36,34 @@ public class IsSquirrel : MonoBehaviour
     }
     // }
     private void OnCollisionEnter(Collision collision)
-    { 
-        if (collision.gameObject.tag != "Acorn")
-        { 
-            return; 
+    {
+        AudioSource source = gameplay_canvas.GetComponent<AudioSource>();
+        if (collision.gameObject.tag == "Acorn")
+        {
+            // play sfx for squirrel touch acorn 
+            AudioSource.PlayClipAtPoint(collideSfx, Camera.main.gameObject.transform.position);
+
+
+            // stop squirrel attack audio
+
+            source.Stop();
+
+            AudioClip clip = Resources.Load<AudioClip>("interact");
+
+            // back to interact mode audio 
+            source.PlayOneShot(clip);
+
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+        else if(collision.gameObject.tag != "Chocolate")
+        {
+            transform.localScale *= 2;
+            AudioClip clip = Resources.Load<AudioClip>("chocolate");
+            source.PlayOneShot(clip);
+            Destroy(collision.gameObject);
         }
 
-        // play sfx for squirrel touch acorn 
-        AudioSource.PlayClipAtPoint(collideSfx, Camera.main.gameObject.transform.position);
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
-
-        // stop squirrel attack audio
-        AudioSource source = gameplay_canvas.GetComponent<AudioSource>();
-        source.Stop();
-
-        AudioClip clip = Resources.Load<AudioClip>("interact");
-
-        // back to interact mode audio 
-        source.PlayOneShot(clip); 
     }
 
     private void Update()

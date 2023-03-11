@@ -26,7 +26,7 @@ public class SpawnTreeExploration : MonoBehaviour
             GameObject tree_obj = Instantiate(new_tree.TreeType);
             new_tree.Obj = tree_obj;
             tree_obj.transform.localScale = Vector3.one * new_tree.exploration_scale;
-            Debug.Log(tree_obj.transform.localScale);
+            // Debug.Log(tree_obj.transform.localScale);
             tree_obj.transform.position = randomvec + map.GeoToWorldPosition(new_tree.WorldLocation);
 
             float rand =  Random.Range(0f, 1f);

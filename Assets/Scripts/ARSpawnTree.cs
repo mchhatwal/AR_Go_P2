@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR.ARFoundation;
 public class ARSpawnTree : MonoBehaviour
 {
     public static TreeInstance show_tree;
     [SerializeField] GameObject squirrel_prefab;
+    public static ARRaycastManager m_RaycastManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_RaycastManager = GameObject.FindGameObjectWithTag("Origin").GetComponent<ARRaycastManager>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,8 @@ public class ARSpawnTree : MonoBehaviour
         if (show_tree != null)
         {
             GameObject new_tree = Instantiate(show_tree.TreeType);
+
+
             new_tree.transform.localScale = Vector3.one * show_tree.scale;
             new_tree.transform.position = new Vector3(0, -1, 2);
             Debug.Log("new tree " + new_tree.transform.position);
