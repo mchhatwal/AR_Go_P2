@@ -7,12 +7,14 @@ public class UserInventory : MonoBehaviour
     // Start is called before the first frame update
     public static UserInventory instance;
     public int acorn_count, acorn_price;
+    public int choco_count, choco_price;
     public List<int> tree_count;
     [SerializeField] GameObject SeedShopPanel;
     public List<int> tree_price;
     [SerializeField] List<TextMeshProUGUI> tree_price_displayer;
     public List<bool> IsTreeUnLocked;
     public TextMeshProUGUI acorn_displayer;
+    [SerializeField] TextMeshProUGUI choco_price_displayer;
     void Start()
     {
         if(instance == null) instance = this;
@@ -30,6 +32,7 @@ public class UserInventory : MonoBehaviour
             else tree_price_displayer[i].text = "$ " + tree_price[i];
         }
         acorn_displayer.text = "$ " + acorn_price;
+        choco_price_displayer.text = "$ " + choco_price;
     }
 
     public void PurchaseSeed(string str)
@@ -40,6 +43,14 @@ public class UserInventory : MonoBehaviour
             {
                 UpdateCurrency.currency -= acorn_price;
                 acorn_count++;
+            }
+        }
+        else if(str == "choco")
+        {
+            if (UpdateCurrency.currency >= choco_price)
+            {
+                UpdateCurrency.currency -= choco_price;
+                choco_count++;
             }
         }
         else
@@ -54,6 +65,8 @@ public class UserInventory : MonoBehaviour
         }
 
     }
+
+
 
     public void OpenSeedShop() {
         if (!SeedShopPanel.activeSelf)

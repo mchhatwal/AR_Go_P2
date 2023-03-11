@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AcornSpawner : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class AcornSpawner : MonoBehaviour
 
     public void LaunchAcorn() 
     { 
-        if (UserInventory.instance.acorn_count > 0)
+        if (UserInventory.instance.acorn_count > 0 && SceneManager.GetActiveScene().name != "exploration_scene")
         {
             // Vector3 spawn_pos = Camera.main.gameObject.transform.position;
             Vector3 spawn_pos = GameObject.FindGameObjectWithTag("MainCamera").transform.position; 

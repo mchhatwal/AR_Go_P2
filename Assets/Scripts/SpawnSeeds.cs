@@ -11,6 +11,8 @@ public class SpawnSeeds : MonoBehaviour
     public AudioClip sfx;
     [SerializeField] List<TextMeshProUGUI> tree_count_displayer;
     [SerializeField] TextMeshProUGUI acorn_count_displayer;
+    [SerializeField] TextMeshProUGUI choco_count_displayer;
+
     // Start is called before the first frame update
     void Start()
     {
