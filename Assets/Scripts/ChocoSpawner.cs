@@ -34,7 +34,7 @@ public class ChocoSpawner : MonoBehaviour
             // Vector3 spawn_pos = Camera.main.gameObject.transform.position;
             Vector3 spawn_pos = GameObject.FindGameObjectWithTag("MainCamera").transform.position; 
             GameObject new_acorn = GameObject.Instantiate(prefab, spawn_pos, Quaternion.identity);
-            new_acorn.GetComponent<Rigidbody>().velocity = Camera.main.gameObject.transform.forward * launch_velo;
+            new_acorn.GetComponent<Rigidbody>().velocity = GameObject.FindGameObjectWithTag("MainCamera").transform.forward * launch_velo;
 
             UserInventory.instance.choco_count = UserInventory.instance.choco_count - 1; 
 

@@ -34,7 +34,7 @@ public class AcornSpawner : MonoBehaviour
             // Vector3 spawn_pos = Camera.main.gameObject.transform.position;
             Vector3 spawn_pos = GameObject.FindGameObjectWithTag("MainCamera").transform.position; 
             GameObject new_acorn = GameObject.Instantiate(acorn_prefab, spawn_pos, Quaternion.identity);
-            new_acorn.GetComponent<Rigidbody>().velocity = Camera.main.gameObject.transform.forward * acorn_launch_velo;
+            new_acorn.GetComponent<Rigidbody>().velocity = GameObject.FindGameObjectWithTag("MainCamera").transform.forward * acorn_launch_velo;
 
             UserInventory.instance.acorn_count = UserInventory.instance.acorn_count - 1; 
 
