@@ -56,7 +56,7 @@ public class IsSquirrel : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-        else if(collision.gameObject.tag != "Chocolate")
+        else if(collision.gameObject.tag == "Chocolate")
         {
             transform.localScale *= 2;
             AudioClip clip = Resources.Load<AudioClip>("chocolate");

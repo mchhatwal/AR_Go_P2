@@ -101,7 +101,6 @@ MonoBehaviour:
   IsInteractiveMode: 0
   collideSfx: {fileID: 8300000, guid: 099f5e31d79a242c98d85aeb659d60e5, type: 3}
   squirrelAttackSfx: {fileID: 8300000, guid: ec8ec3a3004444666b5356ecfdfb39e9, type: 3}
-  gameplay_canvas_instance: {fileID: 0}
 --- !u!54 &2487111522390070821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117,7 +116,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 64
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &4252369305329153565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -129,5 +128,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0029, y: 0.0033999998, z: 0.0011}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
