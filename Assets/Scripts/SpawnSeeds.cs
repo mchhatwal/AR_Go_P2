@@ -29,6 +29,7 @@ public class SpawnSeeds : MonoBehaviour
 
         // Debug.Log(UserInventory.instance.tree_count[0]);
         acorn_count_displayer.text = "" + UserInventory.instance.acorn_count;
+        choco_count_displayer.text = "" + UserInventory.instance.choco_count; 
     }
 
     public void Spawn(string str)
