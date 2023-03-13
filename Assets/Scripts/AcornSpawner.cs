@@ -36,8 +36,10 @@ public class AcornSpawner : MonoBehaviour
             GameObject new_acorn = GameObject.Instantiate(acorn_prefab, spawn_pos, Quaternion.identity);
             new_acorn.GetComponent<Rigidbody>().velocity = Camera.main.gameObject.transform.forward * acorn_launch_velo;
 
+            UserInventory.instance.acorn_count = UserInventory.instance.acorn_count - 1; 
+
             // play sfx for throwing acorn 
-            AudioSource.PlayClipAtPoint(sfx, Camera.main.gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(sfx, spawn_pos);
         }
     }
 }
