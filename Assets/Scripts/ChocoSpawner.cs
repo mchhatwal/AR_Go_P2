@@ -36,8 +36,10 @@ public class ChocoSpawner : MonoBehaviour
             GameObject new_acorn = GameObject.Instantiate(prefab, spawn_pos, Quaternion.identity);
             new_acorn.GetComponent<Rigidbody>().velocity = Camera.main.gameObject.transform.forward * launch_velo;
 
+            UserInventory.instance.choco_count = UserInventory.instance.choco_count - 1; 
+
             // play sfx for throwing acorn 
-            AudioSource.PlayClipAtPoint(sfx, Camera.main.gameObject.transform.position);
+            AudioSource.PlayClipAtPoint(sfx, GameObject.FindGameObjectWithTag("MainCamera").transform.position);
         }
     }
 }

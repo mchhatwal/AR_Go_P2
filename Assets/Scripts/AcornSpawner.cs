@@ -39,7 +39,7 @@ public class AcornSpawner : MonoBehaviour
             UserInventory.instance.acorn_count = UserInventory.instance.acorn_count - 1; 
 
             // play sfx for throwing acorn 
-            AudioSource.PlayClipAtPoint(sfx, spawn_pos);
+            AudioSource.PlayClipAtPoint(sfx, GameObject.FindGameObjectWithTag("MainCamera").transform.position);
         }
     }
 }
